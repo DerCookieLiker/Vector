@@ -75,6 +75,27 @@ double Vector::getElement(int index) const{
     return this->elements[index];
 }
 
+Vector& Vector::operator=(const Vector& rhs){
+
+    if(this == &rhs) return *this;
+    delete[] this->elements;
+    this->elements = new double[rhs.size];
+
+    for(int i = 0; i < rhs.size; i++){
+        this->elements[i] = rhs.elements[i];
+    }
+
+    return *this;
+}
+std::ostream& operator<<(std::ostream& os, const Vector& v){
+    os << "[ ";
+    for(int i = 0; i < v.size; i++){
+        os << v.elements[i] << "; ";
+    }
+    os << "]";
+
+    return os;
+}
 bool Vector::equal(const Vector &v) const{
     if(this->size != v.size) return false;
 

@@ -20,6 +20,9 @@ public:
     void setElement(int index, double value);
     double getElement(int index) const;
 
+    Vector& operator=(const Vector& rhs);
+    friend std::ostream& operator<<(std::ostream& os, const Vector& v);
+
     bool equal(const Vector &v) const;
     void show() const;
 private:

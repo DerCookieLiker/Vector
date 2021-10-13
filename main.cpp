@@ -10,6 +10,14 @@ void testVectorDotProduct(const Vector &v1, const Vector &v2, const double &xpt)
 void testVectorAddAndReturn(const Vector &v1, const Vector &v2, const Vector &xpt);
 
 int main(){
+
+
+    Vector v1(3, {1, 2, 3});
+    Vector v2(1, {2});
+
+    v1 = v1;
+    std::cout << v1;
+    /*
     testVectorAdd(Vector(3, {2.5, 5, 42}), Vector(3, {3.5, 5, -10}), Vector(3, {6, 10, 32}));
     testVectorAdd(Vector(2, {-1, 2}), Vector(3, {1, 3, 20}), Vector(2, {0, 5}));
     testVectorAdd(Vector(3, {4, 0, 42}), Vector(2, {3.5, 5}), Vector(3, {4, 0, 42}));
@@ -29,6 +37,7 @@ int main(){
     testVectorAddAndReturn(Vector(3, {2.5, 5, 42}), Vector(3, {3.5, 5, -10}), Vector(3, {6, 10, 32}));
     testVectorAddAndReturn(Vector(2, {-1, 2}), Vector(3, {1, 3, 20}), Vector(2, {0, 5}));
     testVectorAddAndReturn(Vector(3, {4, 0, 42}), Vector(2, {3.5, 5}), Vector(3, {4, 0, 42}));
+    */
 }
 void testVectorAdd(const Vector &v1, const Vector &v2, const Vector &xpt){
     std::cout << "Add ";
